@@ -1,13 +1,62 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+  transition: all 200ms ease;
+  cursor: default;
+  caret-color: var(--purple);
+  &::selection {
+    background: var(--border_light_purple);
+    border-radius: 5px;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+:root {
+  --dark_purple: #1C1824;
+  --gray_purple: #252030;
+  --border_gray_purple: #332C42;
+  --light_purple: #584B74;
+  --border_light_purple: #6E5E8E;
+  --border_white_purple: #CBB8F1;
+  --white_purple: #EAE3F8;
+  --purple: #5932A8;
+  --select_color_purple: #5932a89c;
 }
+
+body {
+  color: var(--white_purple);
+  background: var(--dark_purple);
+}
+
+input {
+  color: var(--light_purple);
+  font-size: 12px;
+  border-radius: 12px;
+  background: var(--gray_purple);
+  border: none;
+  outline: solid 2px var(--border_gray_purple);
+  padding: 12px 24px;
+  
+  &::placeholder {
+    color: var(--light_purple);
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: var(--light_purple);
+    
+    background: var(--border_gray_purple);
+    box-shadow: 0px 6px 24px var(--dark_purple);
+  }
+
+  &:focus {
+    color: var(--border_white_purple);
+    outline: solid 2px var(--border_light_purple);
+    background: var(--gray_purple);
+  }
+}
+
